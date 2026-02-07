@@ -1,0 +1,43 @@
+.cta {
+    margin-top: 100px;
+    margin-bottom: 70px;
+
+    .container {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        h2 {
+            font-size: clamp(20px, 4vw, 30px);
+            color: var(--main_color);
+            line-height: 1.6;
+        }
+
+        p {
+            max-width: 650px;
+            width: 100%;
+            margin-inline: auto;
+            line-height: 1.7;
+            font-size: clamp(18px, 4vw, 22px);
+        }
+
+        a {
+            display: block;
+            width: 120px;
+            margin-inline: auto;
+            background-color: var(--main_color);
+            color: #FFF;
+            padding-block: 10px;
+            font-size: 17px;
+            border-radius: 10px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .cta {
+        margin-top: 70px;
+        margin-bottom: 60px;
+    }
+}

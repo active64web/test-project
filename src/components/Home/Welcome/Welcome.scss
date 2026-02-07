@@ -1,0 +1,99 @@
+@media (max-width: 767px) {
+    html[lang="ar"] {
+        .welcome {
+            .container {
+                .content {
+                    .links {
+                        a {
+                            padding-top: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.welcome {
+    height: 550px;
+    display: flex;
+    align-items: center;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+
+        .content {
+            width: 60%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 15px;
+
+            h1 {
+                color: var(--main_color);
+                font-size: clamp(20px, 4vw, 45px);
+            }
+
+            p:first-of-type {
+                font-size: clamp(16px, 4vw, 20px);
+                font-weight: 600;
+                line-height: 1.7;
+            }
+
+            p:last-of-type {
+                font-size: clamp(16px, 4vw, 20px);
+                line-height: 1.7;
+            }
+
+            .links {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                margin-top: 20px;
+
+                a {
+                    background-color: var(--main_color);
+                    color: #FFF;
+                    max-width: 200px;
+                    width: 100%;
+                    text-align: center;
+                    padding-block: 12px;
+                    border-radius: 10px;
+                    font-size: clamp(15px, 4vw, 17px);
+                }
+            }
+        }
+
+        .slider {
+            width: 38%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .welcome {
+        height: auto;
+        padding-block: 25px;
+
+        .container {
+            flex-direction: column;
+            gap: 35px;
+
+            >div {
+                width: 100% !important;
+            }
+
+            .content {
+                gap: 10px;
+            }
+        }
+    }
+}
