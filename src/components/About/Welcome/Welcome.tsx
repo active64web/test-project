@@ -1,4 +1,4 @@
-import "./Welcome.scss";
+import styles from "./Welcome.module.scss";
 import { Link } from "@/i18n/navigation";
 import MainSlider from "@/components/MainSlider/MainSlider";
 
@@ -10,9 +10,9 @@ const Welcome = ({ locale }: Props) => {
     const isAr = locale === "ar";
 
     return (
-        <div className="welcome">
-            <div className="container">
-                <div className="content">
+        <div className={styles.welcome}>
+            <div className={`container ${styles.container}`}>
+                <div className={styles.content}>
                     <h1>
                         {isAr ? "من نحن في تيتشاوي؟" : "Who are we at Teachawy?"}
                     </h1>
@@ -29,14 +29,14 @@ const Welcome = ({ locale }: Props) => {
                             : "We don't just offer a design or a website; we provide an integrated learning environment that helps the teacher focus on the content and teaching, instead of being preoccupied with technical details."}
                     </p>
 
-                    <div className="links">
+                    <div className={styles.links}>
                         <Link href="">
                             {isAr ? "تواصل معنا" : "Contact us"}
                         </Link>
                     </div>
                 </div>
 
-                <div className="slider">
+                <div className={styles.slider}>
                     <MainSlider isAr={isAr} />
                 </div>
             </div>
