@@ -7,7 +7,7 @@ import WhatWeOffer from "@/components/Home/WhatWeOffer/WhatWeOffer";
 import WhyChooseUs from "@/components/Home/WhyChooseUs/WhyChooseUs";
 import Statistics from "@/components/Statistics/Statistics";
 
-interface Props {
+type Props = {
     params: Promise<{ locale: string }>
 }
 

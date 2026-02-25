@@ -64,7 +64,7 @@ const Header = () => {
                             <Link href="/pricing" onClick={() => setOpenMenu(false)}>{t('pricing')}</Link>
                         </li>
                         <li>
-                            <Link href="/how_it_works" onClick={() => setOpenMenu(false)}>{t('how_it_works')}</Link>
+                            <Link href="/how-it-works" onClick={() => setOpenMenu(false)}>{t('how_it_works')}</Link>
                         </li>
                         <li>
                             <Link href="/blogs" onClick={() => setOpenMenu(false)}>{t('blogs')}</Link>
@@ -93,7 +93,14 @@ const Header = () => {
                     </ul>
                 </nav>
 
-                <button ref={btnMenuRef} className="menu" onClick={() => setOpenMenu(prev => !prev)}><Menu /></button>
+                <button
+                    ref={btnMenuRef}
+                    className="menu"
+                    onClick={() => setOpenMenu(prev => !prev)}
+                >
+                    <Menu />
+                </button>
+
                 <a href="#">{t("start_now")}</a>
             </div>
         </header>

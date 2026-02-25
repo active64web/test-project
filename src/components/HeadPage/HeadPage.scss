@@ -1,0 +1,10 @@
+.head-page {
+    min-height: 100px;
+    background-color: var(--main_color);
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}

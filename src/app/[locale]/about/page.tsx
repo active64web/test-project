@@ -4,7 +4,7 @@ import IntegratedSolution from "@/components/About/IntegratedSolution/Integrated
 import Welcome from "@/components/About/Welcome/Welcome";
 import Cta from "@/components/Cta/Cta";
 
-interface Props {
+type Props = {
     params: Promise<{ locale: string }>
 }
 
