@@ -13,18 +13,18 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { locale } = await params
-    const isArabic = locale === 'ar'
+    const isAr = locale === 'ar'
 
     return {
-        title: isArabic
+        title: isAr
             ? 'تيتشاوي | منصة تعليمية لإدارة الدروس والطلاب'
             : 'Teachawy | Educational Platform for Managing Learning',
 
-        description: isArabic
+        description: isAr
             ? 'تيتشاوي منصة تعليمية تساعد المدرسين والأكاديميات على إنشاء وإدارة منصاتهم التعليمية بسهولة، متابعة الطلاب، وتنظيم المحتوى في مكان واحد.'
             : 'Teachawy is an educational platform that helps teachers and academies create and manage their learning platforms, track students, and organize content easily.',
 
-        keywords: isArabic
+        keywords: isAr
             ? [
                 'منصة تعليمية',
                 'منصة للمدرسين',

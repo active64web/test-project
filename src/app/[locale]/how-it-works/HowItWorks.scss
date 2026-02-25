@@ -10,7 +10,7 @@
 
         .container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
 
             .item {
@@ -99,6 +99,16 @@
                 padding-block: 10px;
                 font-size: 17px;
                 border-radius: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .how-it-works {
+        .steps {
+            .container {
+                grid-template-columns: repeat(1, 1fr);
             }
         }
     }

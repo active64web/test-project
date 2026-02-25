@@ -1,9 +1,43 @@
 import Image from "next/image";
 import "./HowItWorks.scss";
 import HeadPage from "@/components/HeadPage/HeadPage";
+import { Metadata } from "next";
 
 type Props = {
     params: Promise<{ locale: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { locale } = await params
+    const isAr = locale === 'ar'
+
+    return {
+        title: isAr
+            ? "كيف تعمل المنصة | تيتشاوي"
+            : "How It Works | Teachawy",
+
+        description: isAr
+            ? "تعرّف على خطوات استخدام تيتشاوي، بدءًا من التواصل معنا واختيار الباقة المناسبة، وحتى إنشاء منصتك التعليمية وتخصيصها والبدء في إدارتها بسهولة."
+            : "Discover how Teachawy works, from contacting us and choosing the right plan to creating, customizing, and managing your educational platform with ease.",
+
+        keywords: isAr
+            ? [
+                "كيف تعمل تيتشاوي",
+                "خطوات إنشاء منصة تعليمية",
+                "طريقة استخدام المنصة",
+                "منصة للمدرسين",
+                "إدارة الدروس والطلاب",
+                "تيتشاوي",
+            ]
+            : [
+                "how Teachawy works",
+                "create educational platform steps",
+                "online learning setup process",
+                "teacher platform guide",
+                "student management platform",
+                "Teachawy",
+            ],
+    };
 }
 
 export default async function HowItWorks({ params }: Props) {
